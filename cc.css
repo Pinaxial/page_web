@@ -1,0 +1,426 @@
+/* fichier css pour tout les pages de mon site web*/
+
+/*image du fond des pages du site*/
+body{
+   background-image: url(gutenberg_lycée.jpg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+}
+
+
+/*l'en-tête des pages*/
+header {
+   padding:1%;
+   border-top: 10px  #52383d solid ;
+   border-bottom: 10px  #52383d solid ;
+   background-color: #0b0b0b;
+   position: relative;
+   
+
+   
+}
+/*groupe titre 1 des pages webs*/
+h1{
+   text-align: center;
+   padding: 2%;
+   text-decoration-line: underline;
+   font-size: 50px;
+   font-family: 'Lobster', cursive;
+   
+}
+
+
+/*menu des pages webs*/
+.bouton_menu {
+   background-color: rgba(0, 0, 0, 0);
+   width:90px;
+   height: 90px;
+   border-radius: 20%;
+   border: none;
+   position:relative;
+   cursor: pointer;
+  
+
+   
+
+}
+/*text sous le logo menu*/
+.menu_deroulant  {
+   background-color: #67727e;
+   border: 5px #323538 solid;
+   display: none; 
+
+}
+/*couleur des liens du menu*/
+.li_menu {
+   color: #871018;
+   font-size:20px;
+   text-decoration: none;
+   transition: all 1s ease-out;
+
+}
+.li_menu:hover {
+   background-color: white;
+   
+}
+
+.menu {
+   position: relative;
+display: inline-block;
+
+}
+
+.menu:hover .menu_deroulant{
+   display: block;
+   opacity:1;
+   transition: all 1s ease-out;
+   
+}
+
+
+
+.menu_haut_droit {
+   width: 50px;
+   height: 50px;
+   padding: 10px;
+   border: #47b140 solid;
+   border-radius: 10px 15px 10px 15px ;
+   background-color: #47b140;
+   display: inline-block;
+
+}
+
+
+/*animation menu*/
+
+.bouton_menu:hover {
+   transform: rotate(360deg);
+   background-color:none;
+   transition-duration: 800ms;
+   
+}
+
+
+
+/* logo en haut à droite*/
+.compte {
+   width: 50px;
+   height: 50px;
+   padding: 10px;
+   cursor: pointer;
+   border: solid;
+   border-radius: 20px 25px 20px 25px;
+   background-color: #c3c3c3;
+   transform: scale(1);
+   transition-property: transform;
+   transition-duration: 400ms;
+}
+.compte:hover {
+
+ transform: scale(1.15);
+   
+}
+
+
+/*logo gif au milieu*/
+
+.img_presentation {
+   width: 250px;
+   height: 250px;
+   padding:0.5px;
+   border: #000000 solid;
+   border-radius: 100px 100px 100px 100px;
+   background-color: #000000;
+   transform: rotate(270deg);
+}
+
+
+/*les numérateur*/
+.lh {
+   padding: 1%;
+   text-decoration-line: underline;
+   text-decoration-color: #b4206f;
+   color: #871018;
+   font-size: 50px;
+   font-family: 'Lobster', cursive;
+   
+}
+
+li {
+   font-weight: bold;
+   padding: 15px; 
+   color: #871018;
+   font-size: 25px;
+   border-bottom: 2px#b4206f solid;
+   font-family: 'Caveat', cursive;
+   width:30%;
+}
+/*titre 2*/
+h2 {
+   text-align: center;
+   padding: 20px;
+   text-decoration-line: underline;
+   text-decoration-color: #b4206f;
+   color: purple;
+   font-size: 50px;
+   font-family: 'Lobster', cursive;
+   
+}
+/*titre 3*/
+h3 {
+   text-align: center;
+   padding: 2%;
+   text-decoration-line: underline;
+   text-decoration-color: #b4206f;
+   color: #871018;
+   font-size: 50px;
+   font-family: 'Lobster', cursive;
+   border-bottom: 10px #cc3f3f solid;
+   border-top: 10px #cc3f3f solid;
+}
+/*côté artcile sur les nouvelle technologie*/
+.art_new_tech {
+   padding:1%;
+   background-size: 100% 100%;
+   background-image: url(neige.gif);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   border: 10px #c62f15 solid;
+}
+ .p_new_tech {
+   text-align: center;
+   float:right;
+   font-size: 20px;
+   border: black solid;
+   margin: 10px;
+   padding-top:5px;
+   padding-left:5px;
+   padding-right:5px;
+   border-radius: 5px 5px 5px 5px;
+   color: black;
+   width:50%;
+   transition-property: background width;
+   transition-duration: 900ms;
+   font-family: 'Caveat', cursive;
+   opacity:0;
+}
+.p_new_tech:hover {
+   width:95%;
+   background: brown;
+   opacity:1;
+}
+
+.p_new_tech1 {
+   text-align: center;
+   float:left;
+   font-size: 20px;
+   border: black solid;
+   margin: 10px;
+   padding-bottom:5px;
+   padding-left:5px;
+   padding-right:5px;
+   border-radius: 5px 5px 5px 5px;
+   color: black;
+   width:50%;
+   transition-property: background width;
+   transition-duration: 900ms;
+   font-family: 'Caveat', cursive;
+   opacity:0;
+}
+
+ .p_new_tech1:hover {
+   width:95%;
+   background: brown;
+   opacity:1;
+}
+
+.p_new_tech  .p_new_tech1 {
+   display:block;
+}
+
+
+
+
+
+/*le pied des pages webs*/
+footer {
+   border-bottom: 10px  #52383d solid ;
+   border-right: 10px  #52383d solid;
+   border-left: 10px  #52383d solid;
+   background-color:#000000;
+}
+
+/*paramètre pour réseaux sociaux*/
+.text_lien {
+   text-align: right;
+   color: #ae1f1f;
+   padding-right: 30px;
+   font-size: 25px;
+   padding-top: 5px;
+   text-decoration: #e15527 overline underline;
+   font-family: 'Caveat', cursive;
+   
+   
+   
+}
+/*images réseau sociaux*/
+.lien {
+   float:right;
+   width: 30px;
+   height: 30px;
+   border-left: 5px #e1b327 solid;
+   padding-left: 10px;
+   padding-right: 10px;
+   background-color: #7c4c09;
+   
+
+}
+/*lien entre la page pro*/
+.pro {
+   transition: all 1s ease-in-out;
+   font-size: 25px;
+}
+
+.pro:hover {
+   background-color: white;
+}
+/*paramètre des coordonnées*/
+.cord {
+   text-align:left;
+   padding-left:5px;
+   font-family: 'Caveat', cursive;
+   font-size: 25px;
+   color: #ae1f1f;
+   border-left: 10px #c62f15 solid;
+   text-decoration: underline #c62f15 ;
+   text-decoration: none;
+}
+
+.site_bac {
+   float:right;
+   padding-left:10px;
+   padding-right:10px;
+   font-family: 'Caveat', cursive;
+   font-size: 25px;
+   color: #ae1f1f;
+   border-left: 10px #c62f15 solid;
+   text-decoration: none ;
+   width:18%;
+}
+
+/*acceuil*/
+.acceuil {
+   float:right;
+   margin-right:10px;
+   font-family: 'Caveat', cursive;
+   font-size: 20px;
+   color: #ae1f1f;
+   padding-right:5px;
+}
+/* paramètre  description du bac_pro */
+.p_bac {
+   padding: 15px;
+   font-family: 'Concert One', cursive;
+   font-size: 30px;
+   color: black;
+   border-bottom: 10px black solid;
+   border-top: 10px black solid;
+   background-color: #ca4b34;
+}
+/* paramètre pour l'image digital school*/
+.digi {
+   width: 600px;
+   height:350px;
+   padding: 2px;
+   background-color: white;
+  box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.50), 0 25px 35px 0 rgba(0, 0, 0, 0.50);
+  position:relative;
+  width:55%;
+   
+}
+/* paramètre des flêches gif*/
+.fleche_gauche {
+   float:left;
+   position:relative;
+   width:20%
+}
+
+.fleche_droite {
+   float:right;
+   transform: rotate(180deg);
+   position:relative;
+   width:20%
+}
+/* paramètre des artciles*/
+.article2 {
+   background-color:#c65758;
+   border-bottom: 10px black solid;
+   border-top: 10px black solid;
+}
+
+.article3 {
+   background-color: #c3222f;
+   border-bottom: 10px black solid;
+   border-top: 10px black solid;
+}
+/* paramètre de l'image dans la partie étude*/
+.image_etude {
+   width: 500px;
+   height: 350px;
+   float:right;
+   padding-right:50px;
+   width:40%;
+
+}
+/* texte de droit d'auteur au niveau des lines utils*/
+.droit_auteur {
+   text-align:right;
+   float:left;
+   font-size: 15px;
+   color:white;
+   padding-bottom:10px;
+   width:44%;
+}
+
+/*teste animation avec un cercle*/
+ .cercle {
+   animation: slidein 5s linear 4950ms infinite alternate;
+   width: 30px;
+   height: 30px;
+}
+
+/*titre page de test*/
+.titre_test{
+   color: black;
+   font-size: 20px;
+   margin-bottom: 50px;
+  float: center;
+
+}
+
+
+
+
+@keyframes slidein {
+   
+   from {
+      padding-right: 90%;
+    }
+  
+    to {
+     padding-left: 92%;
+    }
+  }
+  .cercle2 {
+   animation: slidein 5s linear 0s infinite alternate;
+   width: 30px;
+   height: 30px;
+}
+
+
+
+  
+  
+
+

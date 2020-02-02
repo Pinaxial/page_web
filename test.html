@@ -1,0 +1,206 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon"  type="image/png" href="corbeau.png"/>
+<title>Teste</title>
+</head>
+
+<body>
+    <style>
+        body {
+                background-image: url(paysage_sauvage.jpg);
+                background-repeat:no-repeat;
+                background-size: 100% 100%;
+                background-attachment: fixed;
+        }
+            /*animation avec le menu déroulant*/
+        .boutonmenuprincipal {
+        background-color: #e83737;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding:20px;
+        margin-top:20px;
+        font-size: 30px;
+        }
+        .boutonmenuprincipal:hover {
+        background-color: #ff4444;
+        }
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .dropdown-child {
+        display: none;
+        background-color: #f28c8c;
+        min-width: 50px;
+        float:bottom;
+        }
+        .dropdown-child a {
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+        }
+        .dropdown:hover .dropdown-child {
+        display: block;
+        }
+        /*animation avec les boutons*/
+        a {
+          color: #fff;
+          background-color: #333;
+          transition: all 1s ease-out;
+          padding:15px;
+          font-size:15px;
+          float:right;
+        }
+        
+        a:hover,
+        a:focus {
+          color: #333;
+          background-color: #fff;
+        }
+        /*chargement animation*/
+        .bar {
+           /* font-size: 10px */
+           width: 30em;
+           height: 1em;
+           border-radius: 0.5em;
+           position: relative;
+           background: #f2f2f2;
+           box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+           position: fixed;
+         }
+         .bar .percentage {
+           position: relative;
+           font-size: 1em;
+           background: tomato;
+           height: 1em;
+           border-radius: 0.5em;
+         }
+         .has-tip:before,
+         .has-tip:after {
+           content: "";
+           position: absolute;
+           opacity: 0;
+         }
+         .has-tip:before {
+           bottom: -10px;
+           right: -5px;
+           border: 5px solid;
+           border-color: transparent transparent tomato transparent;
+           transition: opacity 0.1s;
+         }
+         .has-tip:after {
+           content: attr(data-perc);
+           bottom: 0;
+           right: 0;
+           white-space: nowrap;
+           padding: 0.6em 1em;
+           border-radius: 2em;
+           line-height: 1;
+           color: #fff;
+           background: tomato;
+           transform: translateX(50%) translateY(100%);
+           transition: transform 0.2s, opacity 0.1s;
+         }
+         .has-tip:hover:before,
+         .has-tip.active:before {
+           opacity: 1;
+         }
+        
+         .has-tip:hover:after,
+         .has-tip.active:after {
+           opacity: 1;
+           transform: translateX(50%) translateY(100%) translateY(10px);
+         }
+        
+        </style>
+                
+        <!--Titre page test-->
+        <h1 class= "titre_test"> Page pour mes testes (page pour le compte en dévelopement)</h1>
+
+                <div class="acceuil" ><a href="cc.html"  style="color: #cc3f46;"><g>retour</g>: Acceuil</a></div>
+                <div class="dropdown">
+                <button class="boutonmenuprincipal">Menu principal</button>
+                <div class="dropdown-child">
+                <a href="http://www.votresite.com/page1.html">Menu enfant 1</a>
+                <a href="http://www.votresite.com/page2.html">Menu enfant 2</a>
+                <a href="http://www.votresite.com/page3.html">Menu enfant 3</a>
+                <a href="http://www.votresite.com/page4.html">Menu enfant 4</a>
+                <a href="http://www.votresite.com/page5.html">Menu enfant 5</a>
+                </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <nav>
+                                <a href="#">Accueil</a>
+                                <a href="#">À propos</a>
+                                <a href="#">Contact</a>
+                                <a href="#">Liens</a>
+                              </nav>
+      <br>
+      <br>
+      <br>
+      <div class="bar">
+          <div class="percentage has-tip"  style="width: 50%" data-perc='100%'>
+          </div>
+        </div>
+        <script>
+          var a = 2.4,  b = "Hello", c = 12.345, d ="World";
+          a = (a/ 3) + c - 1;
+          b = b + "" + d
+        </script>
+        <br>
+        <br>
+        <br>
+      <div class="fleche">
+ <a href="" style="position: fixed; bottom: 10px">Cliquez ici</a>
+</div>
+ <div style="height: 10000px"></div>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script>
+    $('.fleche').click(function(event){
+            event.preventDefault();
+            var positionScroll = 1;
+            $('body').animate({scrollTop: positionScroll}, 1000);
+     });   
+</script>
+
+
+<script>
+(function () {
+  var $bar, perc, start, update;
+
+  $bar = $('.percentage');
+
+  perc = 0;
+
+  update = function () {
+    $bar.css("width", perc + '%');
+    $bar.attr("perc", Math.floor(perc) + '%');
+    perc += 0.2;
+    if (Math.floor(perc) === 5) {
+      $bar.addClass('active');
+    }
+    if (Math.floor(perc) === 95) {
+      $bar.removeClass('active');
+    }
+    if (perc >= 100) {
+      return perc = 0;
+    }
+  };
+
+  start = function () {
+    var run;
+    return run = setInterval(update, 10);
+  };
+
+  start();
+
+}).call(this);
+start()
+</script>
+</body>
+</html>
